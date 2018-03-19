@@ -18,5 +18,8 @@ module.exports = {
             { test: /\.vue$/, loader: "vue-loader" },
             { test: /\.scss$/, loader: "style-loader!css-loader!sass-loader" },
         ]
+    },
+    resolve: {
+        extensions: [".ts", ".js"],
     }
 }

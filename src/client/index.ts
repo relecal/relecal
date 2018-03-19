@@ -2,18 +2,21 @@ import Vue from "vue"
 import VueRouter from "vue-router"
 
 import App from "./app.vue"
-import IndexPage from "./components/index.vue"
+import PageIndex from "./components/pages/index.vue"
+import PageLogin from "./components/pages/login.vue"
 
 import "./bootstrap_custom.scss"
 
 Vue.use(VueRouter)
 
 const routes = [
-    { path: "/", component: IndexPage },
+    { path: "/", component: PageIndex },
+    { path: "/login", component: PageLogin },
 ]
 
 const router = new VueRouter({
-    routes
+    mode: 'history',
+    routes,
 })
 
 const app = new Vue({
